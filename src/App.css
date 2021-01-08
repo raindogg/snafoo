@@ -314,7 +314,6 @@ body {
     padding: 14px 32px;
     background-color: transparent;
     border: 2px solid #ffffff;
-    color: #ffffff;
     font-size: 18px;
     transition: all 300ms;
     cursor: pointer;
@@ -322,7 +321,6 @@ body {
 
 .btn:hover {
     background-color: #ffffff;
-    color: #3d8b9f;
 }
 
 .btn_dark {
@@ -333,6 +331,15 @@ body {
 
 .btn_dark:hover {
     border-color: #3d8b9f;
+}
+
+.btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn:hover a {
+ color: #3d8b9f;
 }
 
 /* ---------------------------------------------------------------------
@@ -385,7 +392,7 @@ body {
 /* ---------------------------------------------------------------------
  footerLogo
 ------------------------------------------------------------------------ */
-.footLogo, #logo {
+.footLogo {
     display: block;
     width: 165px;
     fill: #6b6b6b;
@@ -665,7 +672,7 @@ body {
     border-bottom-color: transparent;
     border-bottom-width: 2px;
     border-bottom-style: solid;
-    color: black;
+    color: #fff;
     font-size: 18px;
     text-decoration: none;
 }
@@ -692,7 +699,7 @@ body {
 }
 
 .site-hd {
-/*    position: absolute;*/
+    position: absolute;
     left: 0;
     width: 100%;
 }

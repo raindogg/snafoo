@@ -17,22 +17,6 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="site">
-      <header className="site-hd">
-          <Logo />
-          <div className="masthead u-constrainer">
-              <a id="logo">
-                  <svg viewBox="0 0 900 300">
-                      <use xlinkHref="#logo"></use>
-                  </svg>
-              </a>
-              <nav className="hList">
-                  <Link className="navLink" to="/">Home</Link>
-                  <Link className="navLink" to="/current">Current</Link>
-                  <Link className="navLink" to="/voting">Voting</Link>
-                  <Link className="navLink" to="/signup">Sign Up</Link>
-              </nav>
-          </div>
-        </header>
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
