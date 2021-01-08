@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 type Props = {
   children: any;
@@ -8,6 +9,7 @@ type Props = {
 const Footer: React.FC<Props> = (props: Props) => {
   return (
             <footer className="site-ft">
+              <Logo />
               <div className="footer u-constrainer">
                   <div className="footer-primary">
                       <a className="footLogo">

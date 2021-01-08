@@ -708,6 +708,44 @@ body {
     background-color: #f6f6f6;
 }
 
+.site-bd-section_geo {
+  background-image: url('./images/geo.jpg');
+}
+
 .site-ft {
     border-top: 1px solid #acacac;
+}
+
+/* ---------------------------------------------------------------------
+ snack squares
+------------------------------------------------------------------------ */
+.snack-square {
+  width: 300px;
+  height: 200px;
+  background-color: #fff;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.5);
+  padding: 5px;
+}
+
+.snack-info {
+  margin-top: 10px;
+}
+
+.snack-info h2 {
+  padding: 5px;
+}
+
+.votes {
+  height: 40px;
+  width: 40px;
+  float: right;
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
+  background-color: #0CC4DD;
+  color: white;
+  font-weight: bold;
+  text-align: right;
+}
+
+.votes p {
+  padding: 5px;
 }
