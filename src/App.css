@@ -818,6 +818,7 @@ table td, table th {
   flex: 1;
   margin: 10px;
 }
+
 #voting-table-head {
   background-color: #3B8DA0;
 }
@@ -850,10 +851,19 @@ table td, table th {
   color: #fff;
 }
 
-.snack-row {
+#voting-table .snack-row {
   color: #868586;
   height: 30px;
   line-height: 30px;
+  cursor: pointer;
+}
+
+#voting-table.voted .snack-row {
+  cursor: not-allowed;
+}
+
+#voting-table .snack-row.selected {
+  cursor: not-allowed;
 }
 
 .snack-row:nth-of-type(odd) {

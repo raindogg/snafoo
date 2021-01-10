@@ -1,14 +1,14 @@
 import React from 'react';
 
 type Props = {
-  currentlySelected: Array<{ id: string, name: string, votes: number }>;
+  currentlySelected: Array<{ id: string, brand: string, product: string, votes: number }>;
   votes: number;
 }
 
 const SelectionTable: React.FC<Props> = (props: Props) => {
   const selections = props.currentlySelected.map((item, i) => {
     return (
-      <p key={i} className="selection">{item.name} <span className="selection-votes">{item.votes}</span></p>
+      <p key={i} className="selection">{`${item.brand} ${item.product}`}<span className="selection-votes">{item.votes}</span></p>
     );
   });
 

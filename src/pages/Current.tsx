@@ -7,7 +7,7 @@ const Current: React.FC = () => {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        getSnacks(setReturnedSnacks, displayError);
+        getSnacks('http://localhost:5000/snacks', setReturnedSnacks, displayError);
     }, []);
 
     const setReturnedSnacks = (res) => {
