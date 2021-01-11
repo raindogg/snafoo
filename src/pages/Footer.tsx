@@ -2,11 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
-type Props = {
-  children: any;
-};
-
-const Footer: React.FC<Props> = (props: Props) => {
+const Footer: React.FC = () => {
   return (
             <footer className="site-ft">
               <Logo />

@@ -818,6 +818,7 @@ table td, table th {
   width: 100%;
   flex: 1;
   margin: 10px;
+  min-width: 300px;
 }
 
 #voting-table-head {
@@ -904,5 +905,22 @@ td.snack-votes {
   padding-right: 20px;
 }
 
+@media (max-width: 767px) {
+  td.snack-votes {
+    display: none;
+  }
+
+  .selection-votes {
+    display: none;
+  }
+
+  .vote-count {
+    display: none;
+  }
+
+  #vote-count-cell {
+    display: none;
+  }
+};
 
 

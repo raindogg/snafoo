@@ -33,7 +33,7 @@ const VotingTable: React.FC<Props> = (props: Props) => {
       <thead>
         <tr id="voting-table-head">
           <th id="vt-header" colSpan={2}>Available Items</th>
-          <th><div className="vote-count vote-count-lt">{props.availableSnacks.length}</div></th>
+          <th id="vote-count-cell"><div className="vote-count vote-count-lt">{props.availableSnacks.length}</div></th>
         </tr>
       </thead>
       <tbody>

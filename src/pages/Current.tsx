@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import SnackSquare from '../components/SnackSquare';
 import { getSnacks } from '../util/requests';
+import { Snack } from '../util/interfaces';
 
 const Current: React.FC = () => {
-    const [snacks, setSnacks] = useState([]);
+    const [snacks, setSnacks] = useState<Array<Snack>>([]);
     const [error, setError] = useState(false);
 
     useEffect(() => {
         getSnacks('http://localhost:5000/snacks', setReturnedSnacks, displayError);
     }, []);
 
-    const setReturnedSnacks = (res) => {
+    const setReturnedSnacks = (res: Array<Snack>) => {
         const sortedSnacks = res.sort((a, b) => b.votes - a.votes);
         setSnacks(res);
     }

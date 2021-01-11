@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import VotingTable from '../components/VotingTable';
 import SelectionTable from '../components/SelectionTable';
 import { getSnacks, voteForSnack } from '../util/requests';
+import { Snack, FutureSnack } from '../util/interfaces';
 
 const Voting: React.FC = () => {
-  const [snacks, setSnacks] = useState([]);
+  const [snacks, setSnacks] = useState<Array<Snack>>([]);
   const [votes, setVotes] = useState(3);
-  const [currentlySelected, setCurrentlySelected] = useState([]);
+  const [currentlySelected, setCurrentlySelected] = useState<Array<FutureSnack>>([]);
   const [error, setError] = useState(false);
   const [votingError, setVotingError] = useState(false);
 
@@ -23,16 +24,16 @@ const Voting: React.FC = () => {
     }
   }, []);
 
-  const vote = (id) => {
+  const vote = (id: string) => {
     voteForSnack(id, updateSelections, displayVoteError);
   }
 
-  const updateSelections = (snack) => {
+  const updateSelections = (snack: FutureSnack) => {
     setVotes(votes -1);
     setCurrentlySelected([...currentlySelected, snack]);
   }
 
-  const updateSnacks = (res) => {
+  const updateSnacks = (res: Array<Snack>) => {
     const sorted = res.sort((a, b) => b.votes - a.votes);
     setSnacks(sorted);
   }

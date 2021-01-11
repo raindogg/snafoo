@@ -1,4 +1,4 @@
-export const getSnacks = async (url, successFn, errorFn) => {
+export const getSnacks = async (url: string, successFn: Function, errorFn: Function) => {
     const requestBody = {
       method: 'GET',
       headers: {
@@ -28,7 +28,7 @@ export const getSnacks = async (url, successFn, errorFn) => {
       }
 }
 
-export const voteForSnack = async (id, successFn, errorFn) => {
+export const voteForSnack = async (id: string, successFn: Function, errorFn: Function) => {
   const requestBody = {
     method: 'POST',
     headers: {

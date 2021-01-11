@@ -6,3 +6,10 @@ export type Snack = {
   image: string;
   votes: number;
 }
+
+export type FutureSnack = {
+  id: string;
+  brand: string;
+  product: string;
+  votes: number;
+}
