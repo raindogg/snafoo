@@ -778,6 +778,7 @@ body {
 
 .voting-grid {
   display: flex;
+  flex-wrap: wrap;
 }
 
 #selection-table {
